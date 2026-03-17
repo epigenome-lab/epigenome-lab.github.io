@@ -368,7 +368,7 @@ nav {
   width: 100%; aspect-ratio: 3/4;
   object-fit: cover;
   display: block;
-  background: var(--burgundy-mid);
+  background: var(--white);
   border: 1px solid var(--cream-dark);
 }
 .professor-photo-placeholder {
@@ -427,7 +427,7 @@ nav {
   width: 100%; aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  background: var(--burgundy-mid);
+  background: var(--white);
   margin-bottom: 0.9rem;
   filter: grayscale(15%);
   transition: var(--transition);
