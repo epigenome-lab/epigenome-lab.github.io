@@ -66,9 +66,11 @@ function initPublications() {
 
   function applyFilters() {
     pubItems.forEach(item => {
-      const year    = item.dataset.year || '';
+      const year    = parseInt(item.dataset.year || '0');
       const text    = item.textContent.toLowerCase();
-      const matchF  = currentFilter === 'all' || year === currentFilter;
+      const matchF  = currentFilter === 'all'
+        || (currentFilter === '2019' && year <= 2019)
+        || String(year) === currentFilter;
       const matchS  = text.includes(currentSearch.toLowerCase());
       item.classList.toggle('hidden-item', !(matchF && matchS));
     });

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OO Lab – University Research Group</title>
+  <title>Aging Epigenomics Lab – KRIBB</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -13,16 +13,17 @@
 ════════════════════════════════ -->
 <nav>
   <a class="nav-logo" href="#" onclick="showPage('home'); return false;">
-    <span class="logo-main">OO Lab</span>
-    <span class="logo-sub">XXX University</span>
+    <span class="logo-main">Aging Epigenomics Lab</span>
+    <span class="logo-sub">KRIBB · UST</span>
   </a>
 
   <ul class="nav-links" id="nav-menu">
     <li><a href="#" data-page="home"    class="active">Home</a></li>
     <li><a href="#" data-page="people">People</a></li>
     <li><a href="#" data-page="alumni">Alumni</a></li>
-    <li><a href="#" data-page="project">Project</a></li>
+    <li><a href="#" data-page="research">Research</a></li>
     <li><a href="#" data-page="publish">Publications</a></li>
+    <li><a href="#" data-page="gallery">Gallery</a></li>
   </ul>
 
   <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴 열기">
@@ -40,19 +41,20 @@
   <section class="hero">
     <div class="hero-grid-pattern"></div>
     <div class="hero-content">
-      <span class="hero-tag fade-in">XXX University · Computer Science</span>
+      <span class="hero-tag fade-in">KRIBB · Aging Convergence Research Center</span>
       <h1 class="fade-in">
-        Advancing <em>Intelligent</em><br>
-        Vision & Robotics<br>
-        Research
+        Decoding the<br>
+        <em>Epigenome</em> of<br>
+        Aging &amp; Disease
       </h1>
       <p class="hero-desc fade-in">
-        우리 연구실은 컴퓨터 비전, 머신러닝, 로보틱스 분야에서 세계 수준의
-        연구를 수행합니다. 실세계 문제를 해결하는 AI 기술 개발을 목표로,
-        학계와 산업을 잇는 혁신적 연구를 이어갑니다.
+        We investigate how epigenetic modifications—especially DNA methylation—
+        govern cellular memory, disease pathogenesis, and the biology of aging.
+        Our multi-omics approach bridges computational analysis and molecular biology
+        to discover novel biomarkers and therapeutic targets.
       </p>
       <div class="hero-actions fade-in">
-        <a href="#" class="btn-primary" onclick="showPage('project'); return false;">연구 보기</a>
+        <a href="#" class="btn-primary" onclick="showPage('research'); return false;">연구 보기</a>
         <a href="#" class="btn-secondary" onclick="showPage('publish'); return false;">논문 목록</a>
       </div>
     </div>
@@ -67,12 +69,12 @@
         <span class="stat-label">Active Projects</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">8</span>
+        <span class="stat-num">7</span>
         <span class="stat-label">Lab Members</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">10+</span>
-        <span class="stat-label">Years</span>
+        <span class="stat-num">KRIBB</span>
+        <span class="stat-label">Institution</span>
       </div>
     </div>
   </section>
@@ -84,28 +86,28 @@
         <span class="section-eyebrow">What We Do</span>
         <h2 class="section-title light">연구 분야</h2>
       </div>
-      <a href="#" class="view-all-link" onclick="showPage('project'); return false;">프로젝트 전체 보기</a>
+      <a href="#" class="view-all-link" onclick="showPage('research'); return false;">Research 전체 보기</a>
     </div>
     <div class="research-areas">
       <div class="research-area-card fade-in">
-        <span class="ra-icon">👁️</span>
-        <h3>Computer Vision</h3>
-        <p>객체 탐지, 시맨틱 분할, 3D 재건 등 시각 인식 전 분야를 연구합니다.</p>
+        <span class="ra-icon">🧬</span>
+        <h3>DNA Methylation</h3>
+        <p>DNA 메틸화 패턴 분석을 통해 질환의 바이오마커와 치료 표적을 발굴합니다.</p>
       </div>
       <div class="research-area-card fade-in">
-        <span class="ra-icon">🧠</span>
-        <h3>Deep Learning</h3>
-        <p>Transformer, GAN, 자기지도학습 등 최신 딥러닝 아키텍처를 탐구합니다.</p>
+        <span class="ra-icon">🫀</span>
+        <h3>MASLD / MASH</h3>
+        <p>대사이상지방간질환의 후성유전체 기전을 규명하고 혁신 치료 기술을 개발합니다.</p>
       </div>
       <div class="research-area-card fade-in">
-        <span class="ra-icon">🤖</span>
-        <h3>Robotics & RL</h3>
-        <p>강화학습 기반 로봇 제어 및 Sim-to-Real Transfer 기술을 개발합니다.</p>
+        <span class="ra-icon">⏳</span>
+        <h3>Aging Epigenomics</h3>
+        <p>노화 관련 후성유전체 변화를 표적으로 하는 SMARTor 편집 기술을 연구합니다.</p>
       </div>
       <div class="research-area-card fade-in">
-        <span class="ra-icon">🏥</span>
-        <h3>Medical AI</h3>
-        <p>의료 영상 분석과 임상 진단 보조를 위한 멀티모달 AI를 연구합니다.</p>
+        <span class="ra-icon">🔬</span>
+        <h3>Multi-omics</h3>
+        <p>RNA-seq, scRNA-seq, ChIP-seq, ATAC-seq 등 다중오믹스 통합 분석을 수행합니다.</p>
       </div>
     </div>
   </section>
@@ -120,34 +122,24 @@
     </div>
     <div class="news-grid">
       <div class="news-card fade-in">
-        <span class="news-date">2024. 06</span>
-        <h3>CVPR 2024 논문 2편 채택</h3>
-        <p>컴퓨터 비전 최고 학회인 CVPR 2024에 연구실 논문 2편이 최종 채택되었습니다.</p>
+        <span class="news-date">2026. 01</span>
+        <h3>New Publication in <em>Clin Mol Hepatol</em></h3>
+        <p>DNMT1 Facilitates the Progression of MASLD by Impeding Transcription Mediated by HNF4α and PPARα. (Sohn HA et al., 2026)</p>
       </div>
       <div class="news-card fade-in">
-        <span class="news-date">2024. 03</span>
-        <h3>과학기술정보통신부 우수연구실 선정</h3>
-        <p>연구실이 올해 우수 AI 연구실로 선정되어 3년간 연구비를 지원받게 되었습니다.</p>
+        <span class="news-date">2025. 04</span>
+        <h3>New Publication in <em>Mol Oncol</em></h3>
+        <p>Integrative transcriptomic analysis identifies emetine as a promising candidate for overcoming acquired resistance to ALK inhibitors in lung cancer. (Park SM et al., 2025)</p>
       </div>
       <div class="news-card fade-in">
-        <span class="news-date">2024. 02</span>
-        <h3>박사과정 김민준 IEEE 최우수논문상 수상</h3>
-        <p>IEEE Transactions on Image Processing에 게재된 논문이 2023년 최우수논문상을 수상하였습니다.</p>
+        <span class="news-date">2025. 01</span>
+        <h3>Correspondence in <em>Clin Mol Hepatol</em></h3>
+        <p>Response to editorial on DNA methylome analysis and epigenetic alteration of complement genes in advanced MASLD. (Magdy A et al., 2025)</p>
       </div>
       <div class="news-card fade-in">
-        <span class="news-date">2023. 12</span>
-        <h3>삼성전자와 산학협력 협약 체결</h3>
-        <p>산업용 AI 비전 기술 개발을 위한 삼성전자와의 2개년 산학협력 과제가 확정되었습니다.</p>
-      </div>
-      <div class="news-card fade-in">
-        <span class="news-date">2023. 09</span>
-        <h3>신입 대학원생 4명 합류</h3>
-        <p>2024년 봄학기를 맞아 박사과정 1명, 석사과정 3명의 신입 연구원이 연구실에 합류하였습니다.</p>
-      </div>
-      <div class="news-card fade-in">
-        <span class="news-date">2023. 06</span>
-        <h3>ICCV 2023 논문 채택</h3>
-        <p>Few-shot Object Detection 관련 연구가 ICCV 2023에 최종 채택되었습니다.</p>
+        <span class="news-date">2024. 10</span>
+        <h3>New Publication in <em>Clin Mol Hepatol</em></h3>
+        <p>DNA methylome analysis reveals epigenetic alteration of complement genes in advanced metabolic dysfunction-associated steatotic liver disease. (Magdy A et al., 2024)</p>
       </div>
     </div>
   </section>
@@ -155,14 +147,14 @@
   <!-- Footer -->
   <footer>
     <div class="footer-left">
-      <div class="footer-logo">OO Lab – XXX University</div>
+      <div class="footer-logo">Aging Epigenomics Lab · KRIBB</div>
       <div class="footer-address">
-        서울특별시 OO구 대학로 00번지 공학관 000호<br>
-        Tel: 02-000-0000 · Email: professor@university.ac.kr
+        Aging Convergence Research Center, KRIBB<br>125 Gwahak-ro, Yuseong-gu, Daejeon 34141, Korea<br>
+        Email: mirang@kribb.re.kr
       </div>
     </div>
     <div class="footer-right">
-      © 2024 OO Lab. All rights reserved.
+      © 2024 Aging Epigenomics Lab. All rights reserved.
     </div>
   </footer>
 
@@ -193,10 +185,10 @@
 
   <footer>
     <div class="footer-left">
-      <div class="footer-logo">OO Lab – XXX University</div>
-      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+      <div class="footer-logo">Aging Epigenomics Lab · KRIBB</div>
+      <div class="footer-address">Aging Convergence Research Center, KRIBB<br>125 Gwahak-ro, Yuseong-gu, Daejeon 34141, Korea</div>
     </div>
-    <div class="footer-right">© 2024 OO Lab.</div>
+    <div class="footer-right">© 2024 Aging Epigenomics Lab.</div>
   </footer>
 </main>
 
@@ -218,22 +210,22 @@
 
   <footer>
     <div class="footer-left">
-      <div class="footer-logo">OO Lab – XXX University</div>
-      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+      <div class="footer-logo">Aging Epigenomics Lab · KRIBB</div>
+      <div class="footer-address">Aging Convergence Research Center, KRIBB<br>125 Gwahak-ro, Yuseong-gu, Daejeon 34141, Korea</div>
     </div>
-    <div class="footer-right">© 2024 OO Lab.</div>
+    <div class="footer-right">© 2024 Aging Epigenomics Lab.</div>
   </footer>
 </main>
 
 
 <!-- ══════════════════════════════
-     PAGE: PROJECT
+     PAGE: RESEARCH
 ════════════════════════════════ -->
-<main id="project" class="page">
+<main id="research" class="page">
 
   <div class="page-header">
     <span class="page-header-tag">Research</span>
-    <h1>Projects</h1>
+    <h1>Research</h1>
     <p>현재 진행 중인 주요 연구 프로젝트를 소개합니다.</p>
   </div>
 
@@ -243,10 +235,10 @@
 
   <footer>
     <div class="footer-left">
-      <div class="footer-logo">OO Lab – XXX University</div>
-      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+      <div class="footer-logo">Aging Epigenomics Lab · KRIBB</div>
+      <div class="footer-address">Aging Convergence Research Center, KRIBB<br>125 Gwahak-ro, Yuseong-gu, Daejeon 34141, Korea</div>
     </div>
-    <div class="footer-right">© 2024 OO Lab.</div>
+    <div class="footer-right">© 2024 Aging Epigenomics Lab.</div>
   </footer>
 </main>
 
@@ -266,12 +258,14 @@
     <!-- Filter Bar -->
     <div class="pub-filter-bar">
       <button class="pub-filter-btn active" data-year="all">All</button>
+      <button class="pub-filter-btn" data-year="2026">2026</button>
+      <button class="pub-filter-btn" data-year="2025">2025</button>
       <button class="pub-filter-btn" data-year="2024">2024</button>
       <button class="pub-filter-btn" data-year="2023">2023</button>
       <button class="pub-filter-btn" data-year="2022">2022</button>
       <button class="pub-filter-btn" data-year="2021">2021</button>
       <button class="pub-filter-btn" data-year="2020">2020</button>
-      <button class="pub-filter-btn" data-year="2019">2019</button>
+      <button class="pub-filter-btn" data-year="2019">~ 2019</button>
       <input type="text" class="pub-search" id="pub-search" placeholder="제목 · 저자 · 저널 검색…" />
     </div>
 
@@ -282,17 +276,61 @@
 
   <footer>
     <div class="footer-left">
-      <div class="footer-logo">OO Lab – XXX University</div>
-      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+      <div class="footer-logo">Aging Epigenomics Lab · KRIBB</div>
+      <div class="footer-address">Aging Convergence Research Center, KRIBB<br>125 Gwahak-ro, Yuseong-gu, Daejeon 34141, Korea</div>
     </div>
-    <div class="footer-right">© 2024 OO Lab.</div>
+    <div class="footer-right">© 2024 Aging Epigenomics Lab.</div>
   </footer>
 </main>
 
 
 <!-- ══════════════════════════════
-     DATA + SCRIPTS
+     PAGE: GALLERY
 ════════════════════════════════ -->
+<main id="gallery" class="page">
+
+  <div class="page-header">
+    <span class="page-header-tag">Lab Life</span>
+    <h1>Gallery</h1>
+    <p>연구실 단체사진과 행사 사진을 모았습니다.</p>
+  </div>
+
+  <div class="content-section">
+
+    <!-- Category Filter -->
+    <div class="pub-filter-bar" id="gallery-filter-bar">
+      <button class="pub-filter-btn active" data-cat="all">All</button>
+      <button class="pub-filter-btn" data-cat="group">단체사진</button>
+      <button class="pub-filter-btn" data-cat="event">행사·학회</button>
+      <button class="pub-filter-btn" data-cat="workshop">워크샵·MT</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid"><!-- JS로 렌더링 --></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close">✕</button>
+      <button class="lightbox-prev" id="lightbox-prev">‹</button>
+      <button class="lightbox-next" id="lightbox-next">›</button>
+      <div class="lightbox-inner">
+        <img src="" alt="" id="lightbox-img" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">Aging Epigenomics Lab · KRIBB</div>
+      <div class="footer-address">Aging Convergence Research Center, KRIBB<br>125 Gwahak-ro, Yuseong-gu, Daejeon 34141, Korea</div>
+    </div>
+    <div class="footer-right">© 2024 Aging Epigenomics Lab.</div>
+  </footer>
+</main>
+
+
+
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script>
@@ -392,6 +430,88 @@ function imgOrPlaceholder(src, cls, emoji) {
       </div>
     </div>`).join('');
 })();
+/* Gallery */
+(function renderGallery() {
+  const grid = document.getElementById('gallery-grid');
+  if (!grid) return;
+  grid.innerHTML = GALLERY.map((item, i) => `
+    <div class="gallery-item fade-in" data-cat="${item.cat}" data-index="${i}">
+      ${imgOrPlaceholder(item.photo, 'gallery-photo', item.emoji || '🖼️')}
+      <div class="gallery-overlay">
+        <div class="gallery-item-title">${item.title}</div>
+        <div class="gallery-item-date">${item.date}</div>
+      </div>
+    </div>`).join('');
+
+  // Lightbox logic
+  const lightbox   = document.getElementById('lightbox');
+  const lbImg      = document.getElementById('lightbox-img');
+  const lbCaption  = document.getElementById('lightbox-caption');
+  const lbClose    = document.getElementById('lightbox-close');
+  const lbPrev     = document.getElementById('lightbox-prev');
+  const lbNext     = document.getElementById('lightbox-next');
+  let currentIndex = 0;
+  let visibleItems = [];
+
+  function openLightbox(index) {
+    visibleItems = [...document.querySelectorAll('.gallery-item:not(.hidden-item)')];
+    currentIndex = visibleItems.indexOf(document.querySelector(`.gallery-item[data-index="${index}"]`));
+    showSlide();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function showSlide() {
+    const idx  = parseInt(visibleItems[currentIndex].dataset.index);
+    const item = GALLERY[idx];
+    lbImg.src  = item.photo;
+    lbImg.onerror = () => { lbImg.style.display='none'; };
+    lbCaption.innerHTML = `<strong>${item.title}</strong> · ${item.date}`;
+  }
+
+  grid.addEventListener('click', e => {
+    const card = e.target.closest('.gallery-item');
+    if (card) openLightbox(parseInt(card.dataset.index));
+  });
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+  lbPrev.addEventListener('click', e => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    showSlide();
+  });
+  lbNext.addEventListener('click', e => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % visibleItems.length;
+    showSlide();
+  });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex-1+visibleItems.length)%visibleItems.length; showSlide(); }
+    if (e.key === 'ArrowRight') { currentIndex = (currentIndex+1)%visibleItems.length; showSlide(); }
+  });
+})();
+
+/* Gallery Filter */
+(function initGalleryFilter() {
+  const btns  = document.querySelectorAll('#gallery-filter-bar .pub-filter-btn');
+  const items = () => document.querySelectorAll('.gallery-item');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      items().forEach(item => {
+        item.classList.toggle('hidden-item', cat !== 'all' && item.dataset.cat !== cat);
+      });
+    });
+  });
+})();
+
 </script>
 
 </body>
