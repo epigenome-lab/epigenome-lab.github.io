@@ -35,12 +35,12 @@ const MEMBERS = [
 
 // ── 졸업생 정보 ──────────────────────────────────────────
 const ALUMNI = [
-  { name: "허난형 (Nanhyung Huh)",    role: "M.S.",     photo: "" },
-  { name: "허해정 (Hyun Ahm Sohn)",   role: "Ph.D.",    photo: "" },
-  { name: "임현정 (Hyun Jung Lim)",   role: "M.S.",     photo: "" },
-  { name: "신양지 (Yang-Ji Shin)",    role: "M.S.",     photo: "i" },
-  { name: "아말 마그디 (Amal Magdy)", role: "M.S.",     photo: "" },
-  { name: "함기옥 (Keeok Haam)",      role: "Post-Doc", photo: "" },
+  { name: "허난형 (Nanhyung Huh)",    role: "M.S." },
+  { name: "허해정 (Hyun Ahm Sohn)",   role: "Ph.D."},
+  { name: "임현정 (Hyun Jung Lim)",   role: "M.S." },
+  { name: "신양지 (Yang-Ji Shin)",    role: "M.S." },
+  { name: "아말 마그디 (Amal Magdy)", role: "M.S."},
+  { name: "함기옥 (Keeok Haam)",      role: "Post-Doc" },
 ];
 
 // ── 연구 프로젝트 ─────────────────────────────────────────
@@ -76,15 +76,15 @@ EZH2 매개 H3K27me3 변화가 간 세포의 지방 축적 및 염증 반응에 
 ];
 
 // ── 갤러리 데이터 ─────────────────────────────────────────
+// photo 경로와 date(표시될 연도/날짜)만 입력하면 됩니다
 const GALLERY = [
-  { title: "Lab Photo 2025", date: "2025", cat: "group", photo: "images/gallery_img/gallery_2025.png", emoji: "👥" },
-  { title: "Lab Photo 2024", date: "2024", cat: "group", photo: "images/gallery_img/gallery_2024.png", emoji: "👥" },
-  { title: "Lab Photo 2023", date: "2023", cat: "group", photo: "images/gallery_img/gallery_2023.png", emoji: "👥" },
-  { title: "Lab Photo 2022", date: "2022", cat: "group", photo: "images/gallery_img/gallery_2022.png", emoji: "👥" },
-  { title: "Lab Photo 2021", date: "2021", cat: "group", photo: "images/gallery_img/gallery_2021.png", emoji: "👥" },
-  { title: "Lab Photo 2020", date: "2020", cat: "group", photo: "images/gallery_img/gallery_2020.png", emoji: "👥" },
-  // 행사 사진 추가 시 아래에 계속 추가하세요
-  // { title: "행사 이름", date: "2024. 06", cat: "event", photo: "images/gallery_img/event1.png", emoji: "🎤" },
+  { date: "2025", photo: "images/gallery_img/gallery_2025.png", emoji: "👥" },
+  { date: "2024", photo: "images/gallery_img/gallery_2024.png", emoji: "👥" },
+  { date: "2023", photo: "images/gallery_img/gallery_2023.png", emoji: "👥" },
+  { date: "2022", photo: "images/gallery_img/gallery_2022.png", emoji: "👥" },
+  { date: "2021", photo: "images/gallery_img/gallery_2021.png", emoji: "👥" },
+  { date: "2020", photo: "images/gallery_img/gallery_2020.png", emoji: "👥" },
+  // 사진 추가 시: { date: "2024. 06", photo: "images/gallery_img/파일명.png", emoji: "📸" },
 ];
 
 // ── 논문 데이터 (60편) ────────────────────────────────────

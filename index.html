@@ -177,9 +177,21 @@
     <!-- Professor -->
     <div id="professor-card"><!-- JS로 렌더링 --></div>
 
-    <!-- Current Members -->
-    <p class="member-section-title">Current Members</p>
-    <div class="members-grid" id="members-grid"><!-- JS로 렌더링 --></div>
+    <!-- Post-Doc -->
+    <p class="member-section-title">Post-Doctoral Researchers</p>
+    <div class="members-grid" id="members-postdoc"></div>
+
+    <!-- PhD -->
+    <p class="member-section-title">Ph.D. Students</p>
+    <div class="members-grid" id="members-phd"></div>
+
+    <!-- MS -->
+    <p class="member-section-title">M.S. Researchers</p>
+    <div class="members-grid" id="members-ms"></div>
+
+    <!-- Intern -->
+    <p class="member-section-title">Intern Students</p>
+    <div class="members-grid" id="members-intern"></div>
 
   </div>
 
@@ -205,7 +217,7 @@
   </div>
 
   <div class="content-section">
-    <div class="members-grid" id="alumni-grid"><!-- JS로 렌더링 --></div>
+    <div class="alumni-grid" id="alumni-grid"><!-- JS로 렌더링 --></div>
   </div>
 
   <footer>
@@ -296,15 +308,6 @@
   </div>
 
   <div class="content-section">
-
-    <!-- Category Filter -->
-    <div class="pub-filter-bar" id="gallery-filter-bar">
-      <button class="pub-filter-btn active" data-cat="all">All</button>
-      <button class="pub-filter-btn" data-cat="group">단체사진</button>
-      <button class="pub-filter-btn" data-cat="event">행사·학회</button>
-      <button class="pub-filter-btn" data-cat="workshop">워크샵·MT</button>
-    </div>
-
     <div class="gallery-grid" id="gallery-grid"><!-- JS로 렌더링 --></div>
 
     <!-- Lightbox -->
@@ -370,25 +373,39 @@ function imgOrPlaceholder(src, cls, emoji) {
     </div>`;
 })();
 
-/* Members */
+/* Members - 4 sections */
 (function renderMembers() {
-  const grid = document.getElementById('members-grid');
-  if (!grid) return;
-  grid.innerHTML = MEMBERS.map(m => `
-    <div class="member-card fade-in">
-      ${imgOrPlaceholder(m.photo, 'member-photo', '🧑‍💻')}
-      <div class="member-name">${m.name}</div>
-      <div class="member-role">${m.role}</div>
-    </div>`).join('');
+  const roleMap = {
+    'postdoc': ['Post-Doc'],
+    'phd':     ['Ph.D. Student'],
+    'ms':      ['M.S. Researcher'],
+    'intern':  ['Intern Student'],
+  };
+
+  Object.entries(roleMap).forEach(([key, roles]) => {
+    const grid = document.getElementById(`members-${key}`);
+    if (!grid) return;
+    const filtered = MEMBERS.filter(m => roles.includes(m.role));
+    if (filtered.length === 0) {
+      grid.closest('.content-section') && grid.previousElementSibling?.remove();
+      grid.remove();
+      return;
+    }
+    grid.innerHTML = filtered.map(m => `
+      <div class="member-card fade-in">
+        ${imgOrPlaceholder(m.photo, 'member-photo', '🧑‍🔬')}
+        <div class="member-name">${m.name}</div>
+        <div class="member-role">${m.role}</div>
+      </div>`).join('');
+  });
 })();
 
-/* Alumni */
+/* Alumni - text cards only */
 (function renderAlumni() {
   const grid = document.getElementById('alumni-grid');
   if (!grid) return;
   grid.innerHTML = ALUMNI.map(a => `
-    <div class="member-card fade-in">
-      ${imgOrPlaceholder(a.photo, 'member-photo', '🎓')}
+    <div class="alumni-card fade-in">
       <div class="member-name">${a.name}</div>
       <div class="member-role">${a.role}</div>
     </div>`).join('');
@@ -435,27 +452,24 @@ function imgOrPlaceholder(src, cls, emoji) {
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
   grid.innerHTML = GALLERY.map((item, i) => `
-    <div class="gallery-item fade-in" data-cat="${item.cat}" data-index="${i}">
+    <div class="gallery-item fade-in" data-index="${i}">
       ${imgOrPlaceholder(item.photo, 'gallery-photo', item.emoji || '🖼️')}
       <div class="gallery-overlay">
-        <div class="gallery-item-title">${item.title}</div>
         <div class="gallery-item-date">${item.date}</div>
       </div>
     </div>`).join('');
 
   // Lightbox logic
-  const lightbox   = document.getElementById('lightbox');
-  const lbImg      = document.getElementById('lightbox-img');
-  const lbCaption  = document.getElementById('lightbox-caption');
-  const lbClose    = document.getElementById('lightbox-close');
-  const lbPrev     = document.getElementById('lightbox-prev');
-  const lbNext     = document.getElementById('lightbox-next');
+  const lightbox  = document.getElementById('lightbox');
+  const lbImg     = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  const lbClose   = document.getElementById('lightbox-close');
+  const lbPrev    = document.getElementById('lightbox-prev');
+  const lbNext    = document.getElementById('lightbox-next');
   let currentIndex = 0;
-  let visibleItems = [];
 
   function openLightbox(index) {
-    visibleItems = [...document.querySelectorAll('.gallery-item:not(.hidden-item)')];
-    currentIndex = visibleItems.indexOf(document.querySelector(`.gallery-item[data-index="${index}"]`));
+    currentIndex = index;
     showSlide();
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -465,11 +479,11 @@ function imgOrPlaceholder(src, cls, emoji) {
     document.body.style.overflow = '';
   }
   function showSlide() {
-    const idx  = parseInt(visibleItems[currentIndex].dataset.index);
-    const item = GALLERY[idx];
-    lbImg.src  = item.photo;
-    lbImg.onerror = () => { lbImg.style.display='none'; };
-    lbCaption.innerHTML = `<strong>${item.title}</strong> · ${item.date}`;
+    const item = GALLERY[currentIndex];
+    lbImg.src = item.photo;
+    lbImg.style.display = '';
+    lbImg.onerror = () => { lbImg.style.display = 'none'; };
+    lbCaption.innerHTML = `<strong>${item.date}</strong>`;
   }
 
   grid.addEventListener('click', e => {
@@ -480,35 +494,19 @@ function imgOrPlaceholder(src, cls, emoji) {
   lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
   lbPrev.addEventListener('click', e => {
     e.stopPropagation();
-    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    currentIndex = (currentIndex - 1 + GALLERY.length) % GALLERY.length;
     showSlide();
   });
   lbNext.addEventListener('click', e => {
     e.stopPropagation();
-    currentIndex = (currentIndex + 1) % visibleItems.length;
+    currentIndex = (currentIndex + 1) % GALLERY.length;
     showSlide();
   });
   document.addEventListener('keydown', e => {
     if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex-1+visibleItems.length)%visibleItems.length; showSlide(); }
-    if (e.key === 'ArrowRight') { currentIndex = (currentIndex+1)%visibleItems.length; showSlide(); }
-  });
-})();
-
-/* Gallery Filter */
-(function initGalleryFilter() {
-  const btns  = document.querySelectorAll('#gallery-filter-bar .pub-filter-btn');
-  const items = () => document.querySelectorAll('.gallery-item');
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.dataset.cat;
-      items().forEach(item => {
-        item.classList.toggle('hidden-item', cat !== 'all' && item.dataset.cat !== cat);
-      });
-    });
+    if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + GALLERY.length) % GALLERY.length; showSlide(); }
+    if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % GALLERY.length; showSlide(); }
   });
 })();
 
