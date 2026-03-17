@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OO Lab – University Research Group</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     NAVIGATION
+════════════════════════════════ -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home'); return false;">
+    <span class="logo-main">OO Lab</span>
+    <span class="logo-sub">XXX University</span>
+  </a>
+
+  <ul class="nav-links" id="nav-menu">
+    <li><a href="#" data-page="home"    class="active">Home</a></li>
+    <li><a href="#" data-page="people">People</a></li>
+    <li><a href="#" data-page="alumni">Alumni</a></li>
+    <li><a href="#" data-page="project">Project</a></li>
+    <li><a href="#" data-page="publish">Publications</a></li>
+  </ul>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- ══════════════════════════════
+     PAGE: HOME
+════════════════════════════════ -->
+<main id="home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-grid-pattern"></div>
+    <div class="hero-content">
+      <span class="hero-tag fade-in">XXX University · Computer Science</span>
+      <h1 class="fade-in">
+        Advancing <em>Intelligent</em><br>
+        Vision & Robotics<br>
+        Research
+      </h1>
+      <p class="hero-desc fade-in">
+        우리 연구실은 컴퓨터 비전, 머신러닝, 로보틱스 분야에서 세계 수준의
+        연구를 수행합니다. 실세계 문제를 해결하는 AI 기술 개발을 목표로,
+        학계와 산업을 잇는 혁신적 연구를 이어갑니다.
+      </p>
+      <div class="hero-actions fade-in">
+        <a href="#" class="btn-primary" onclick="showPage('project'); return false;">연구 보기</a>
+        <a href="#" class="btn-secondary" onclick="showPage('publish'); return false;">논문 목록</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">60+</span>
+        <span class="stat-label">Publications</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Active Projects</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Lab Members</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">Years</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Areas -->
+  <section class="home-section alt-bg">
+    <div class="section-header">
+      <div class="section-title-group">
+        <span class="section-eyebrow">What We Do</span>
+        <h2 class="section-title light">연구 분야</h2>
+      </div>
+      <a href="#" class="view-all-link" onclick="showPage('project'); return false;">프로젝트 전체 보기</a>
+    </div>
+    <div class="research-areas">
+      <div class="research-area-card fade-in">
+        <span class="ra-icon">👁️</span>
+        <h3>Computer Vision</h3>
+        <p>객체 탐지, 시맨틱 분할, 3D 재건 등 시각 인식 전 분야를 연구합니다.</p>
+      </div>
+      <div class="research-area-card fade-in">
+        <span class="ra-icon">🧠</span>
+        <h3>Deep Learning</h3>
+        <p>Transformer, GAN, 자기지도학습 등 최신 딥러닝 아키텍처를 탐구합니다.</p>
+      </div>
+      <div class="research-area-card fade-in">
+        <span class="ra-icon">🤖</span>
+        <h3>Robotics & RL</h3>
+        <p>강화학습 기반 로봇 제어 및 Sim-to-Real Transfer 기술을 개발합니다.</p>
+      </div>
+      <div class="research-area-card fade-in">
+        <span class="ra-icon">🏥</span>
+        <h3>Medical AI</h3>
+        <p>의료 영상 분석과 임상 진단 보조를 위한 멀티모달 AI를 연구합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="home-section">
+    <div class="section-header">
+      <div class="section-title-group">
+        <span class="section-eyebrow">Latest Updates</span>
+        <h2 class="section-title">최근 소식</h2>
+      </div>
+    </div>
+    <div class="news-grid">
+      <div class="news-card fade-in">
+        <span class="news-date">2024. 06</span>
+        <h3>CVPR 2024 논문 2편 채택</h3>
+        <p>컴퓨터 비전 최고 학회인 CVPR 2024에 연구실 논문 2편이 최종 채택되었습니다.</p>
+      </div>
+      <div class="news-card fade-in">
+        <span class="news-date">2024. 03</span>
+        <h3>과학기술정보통신부 우수연구실 선정</h3>
+        <p>연구실이 올해 우수 AI 연구실로 선정되어 3년간 연구비를 지원받게 되었습니다.</p>
+      </div>
+      <div class="news-card fade-in">
+        <span class="news-date">2024. 02</span>
+        <h3>박사과정 김민준 IEEE 최우수논문상 수상</h3>
+        <p>IEEE Transactions on Image Processing에 게재된 논문이 2023년 최우수논문상을 수상하였습니다.</p>
+      </div>
+      <div class="news-card fade-in">
+        <span class="news-date">2023. 12</span>
+        <h3>삼성전자와 산학협력 협약 체결</h3>
+        <p>산업용 AI 비전 기술 개발을 위한 삼성전자와의 2개년 산학협력 과제가 확정되었습니다.</p>
+      </div>
+      <div class="news-card fade-in">
+        <span class="news-date">2023. 09</span>
+        <h3>신입 대학원생 4명 합류</h3>
+        <p>2024년 봄학기를 맞아 박사과정 1명, 석사과정 3명의 신입 연구원이 연구실에 합류하였습니다.</p>
+      </div>
+      <div class="news-card fade-in">
+        <span class="news-date">2023. 06</span>
+        <h3>ICCV 2023 논문 채택</h3>
+        <p>Few-shot Object Detection 관련 연구가 ICCV 2023에 최종 채택되었습니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">OO Lab – XXX University</div>
+      <div class="footer-address">
+        서울특별시 OO구 대학로 00번지 공학관 000호<br>
+        Tel: 02-000-0000 · Email: professor@university.ac.kr
+      </div>
+    </div>
+    <div class="footer-right">
+      © 2024 OO Lab. All rights reserved.
+    </div>
+  </footer>
+
+</main><!-- /home -->
+
+
+<!-- ══════════════════════════════
+     PAGE: PEOPLE
+════════════════════════════════ -->
+<main id="people" class="page">
+
+  <div class="page-header">
+    <span class="page-header-tag">Our Team</span>
+    <h1>People</h1>
+    <p>연구실을 이끄는 교수님과 연구원들을 소개합니다.</p>
+  </div>
+
+  <div class="content-section">
+
+    <!-- Professor -->
+    <div id="professor-card"><!-- JS로 렌더링 --></div>
+
+    <!-- Current Members -->
+    <p class="member-section-title">Current Members</p>
+    <div class="members-grid" id="members-grid"><!-- JS로 렌더링 --></div>
+
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">OO Lab – XXX University</div>
+      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+    </div>
+    <div class="footer-right">© 2024 OO Lab.</div>
+  </footer>
+</main>
+
+
+<!-- ══════════════════════════════
+     PAGE: ALUMNI
+════════════════════════════════ -->
+<main id="alumni" class="page">
+
+  <div class="page-header">
+    <span class="page-header-tag">Lab History</span>
+    <h1>Alumni</h1>
+    <p>연구실을 거쳐 각 분야에서 활약하고 있는 졸업생들입니다.</p>
+  </div>
+
+  <div class="content-section">
+    <div class="members-grid" id="alumni-grid"><!-- JS로 렌더링 --></div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">OO Lab – XXX University</div>
+      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+    </div>
+    <div class="footer-right">© 2024 OO Lab.</div>
+  </footer>
+</main>
+
+
+<!-- ══════════════════════════════
+     PAGE: PROJECT
+════════════════════════════════ -->
+<main id="project" class="page">
+
+  <div class="page-header">
+    <span class="page-header-tag">Research</span>
+    <h1>Projects</h1>
+    <p>현재 진행 중인 주요 연구 프로젝트를 소개합니다.</p>
+  </div>
+
+  <div class="content-section">
+    <div class="projects-list" id="projects-list"><!-- JS로 렌더링 --></div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">OO Lab – XXX University</div>
+      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+    </div>
+    <div class="footer-right">© 2024 OO Lab.</div>
+  </footer>
+</main>
+
+
+<!-- ══════════════════════════════
+     PAGE: PUBLICATIONS
+════════════════════════════════ -->
+<main id="publish" class="page">
+
+  <div class="page-header">
+    <span class="page-header-tag">Research Output</span>
+    <h1>Publications</h1>
+    <p>국내외 저명 학술지 및 학회에 발표한 연구 논문 목록입니다.</p>
+  </div>
+
+  <div class="content-section">
+    <!-- Filter Bar -->
+    <div class="pub-filter-bar">
+      <button class="pub-filter-btn active" data-year="all">All</button>
+      <button class="pub-filter-btn" data-year="2024">2024</button>
+      <button class="pub-filter-btn" data-year="2023">2023</button>
+      <button class="pub-filter-btn" data-year="2022">2022</button>
+      <button class="pub-filter-btn" data-year="2021">2021</button>
+      <button class="pub-filter-btn" data-year="2020">2020</button>
+      <button class="pub-filter-btn" data-year="2019">2019</button>
+      <input type="text" class="pub-search" id="pub-search" placeholder="제목 · 저자 · 저널 검색…" />
+    </div>
+
+    <p class="pub-count" id="pub-count"><span>60</span> publications</p>
+
+    <div class="pub-list" id="pub-list"><!-- JS로 렌더링 --></div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-logo">OO Lab – XXX University</div>
+      <div class="footer-address">서울특별시 OO구 대학로 00번지 공학관 000호</div>
+    </div>
+    <div class="footer-right">© 2024 OO Lab.</div>
+  </footer>
+</main>
+
+
+<!-- ══════════════════════════════
+     DATA + SCRIPTS
+════════════════════════════════ -->
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+/* ── Render helpers ────────────────────────────────────── */
+
+function imgOrPlaceholder(src, cls, emoji) {
+  return `<img src="${src}" alt="" class="${cls}"
+    onerror="this.outerHTML='<div class=\\'${cls}-placeholder\\'>${emoji}</div>'" />`;
+}
+
+/* Professor */
+(function renderProfessor() {
+  const el = document.getElementById('professor-card');
+  if (!el) return;
+  const p = PROFESSOR;
+  const interestHtml = p.interests.map(i =>
+    `<span class="tag-pill">${i}</span>`).join('');
+
+  el.innerHTML = `
+    <div class="professor-card">
+      <div class="professor-photo-wrap">
+        ${imgOrPlaceholder(p.photo, 'professor-photo', '👨‍🔬')}
+      </div>
+      <div class="professor-info">
+        <h2 class="professor-name">${p.name}</h2>
+        <span class="professor-title">${p.title}</span>
+        <p class="professor-bio">${p.bio.replace(/\n/g,'<br>')}</p>
+        <div class="project-tags" style="margin-bottom:1.75rem">${interestHtml}</div>
+        <a href="mailto:${p.email}" class="professor-contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 7 10 7 10-7"/>
+          </svg>
+          ${p.email}
+        </a>
+      </div>
+    </div>`;
+})();
+
+/* Members */
+(function renderMembers() {
+  const grid = document.getElementById('members-grid');
+  if (!grid) return;
+  grid.innerHTML = MEMBERS.map(m => `
+    <div class="member-card fade-in">
+      ${imgOrPlaceholder(m.photo, 'member-photo', '🧑‍💻')}
+      <div class="member-name">${m.name}</div>
+      <div class="member-role">${m.role}</div>
+    </div>`).join('');
+})();
+
+/* Alumni */
+(function renderAlumni() {
+  const grid = document.getElementById('alumni-grid');
+  if (!grid) return;
+  grid.innerHTML = ALUMNI.map(a => `
+    <div class="member-card fade-in">
+      ${imgOrPlaceholder(a.photo, 'member-photo', '🎓')}
+      <div class="member-name">${a.name}</div>
+      <div class="member-role">${a.role}</div>
+    </div>`).join('');
+})();
+
+/* Projects */
+(function renderProjects() {
+  const list = document.getElementById('projects-list');
+  if (!list) return;
+  list.innerHTML = PROJECTS.map((pr, i) => `
+    <div class="project-card">
+      <div class="project-image-wrap">
+        ${imgOrPlaceholder(pr.image, 'project-image', ['🚗','🏥','🤖'][i])}
+      </div>
+      <div class="project-text">
+        <span class="project-num">0${i+1}</span>
+        <span class="project-tag">${pr.tag}</span>
+        <h2 class="project-title">${pr.title}</h2>
+        <p class="project-desc">${pr.desc.replace(/\n/g,'<br>')}</p>
+        <div class="project-tags">
+          ${pr.tags.map(t=>`<span class="tag-pill">${t}</span>`).join('')}
+          <span class="tag-pill" style="margin-left:auto;color:var(--text-light)">${pr.period}</span>
+        </div>
+      </div>
+    </div>`).join('');
+})();
+
+/* Publications */
+(function renderPublications() {
+  const list = document.getElementById('pub-list');
+  if (!list) return;
+  list.innerHTML = PUBLICATIONS.map(pub => `
+    <div class="pub-item fade-in" data-year="${pub.year}">
+      <div class="pub-year">${pub.year}</div>
+      <div class="pub-content">
+        <div class="pub-title">${pub.title}</div>
+        <div class="pub-authors">${pub.authors}</div>
+        <div class="pub-journal">${pub.journal}</div>
+      </div>
+    </div>`).join('');
+})();
+</script>
+
+</body>
+</html>
