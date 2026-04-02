@@ -7,7 +7,7 @@
 const PROFESSOR = {
   name: "김미랑 (Mirang Kim), Ph.D.",
   title: "Principal Researcher · Aging Convergence Research Center, KRIBB\nProfessor · Department of Functional Genomics, UST",
-  photo: "images/people_img/professor.jpg",
+  photo: "images/people_img/professor.jpg?v=2",
   bio: `Dr. Mirang Kim is an investigator specializing in the intersection of genomics and epigenomics. Her research is dedicated to decoding how epigenetic modifications—with a primary emphasis on DNA methylation—govern cellular memory, disease pathogenesis, and the biological process of aging.
 
 Her work has provided critical insights into the molecular drivers of complex diseases, including oncology (gastric and lung cancers), metabolic health (MASLD and MASH), and aging (epigenome editing technology aimed at modulating and reversing aging-related cellular decline).
@@ -78,7 +78,7 @@ We analyze the effects of EZH2-mediated H3K27me3 changes on hepatic lipid accumu
 // ── 갤러리 데이터 ─────────────────────────────────────────
 // photo 경로와 date(표시될 연도/날짜)만 입력하면 됩니다
 const GALLERY = [
-  { date: "2026", photo: "images/gallery_img/gallery_2026.jpg", emoji: "🌸" },
+  { date: "2026", photo: "images/gallery_img/gallery_2026.jpg", emoji: "👥" },
   { date: "2025", photo: "images/gallery_img/gallery_2025.jpg", emoji: "👥" },
   { date: "2024", photo: "images/gallery_img/gallery_2024.jpg", emoji: "👥" },
   { date: "2023", photo: "images/gallery_img/gallery_2023.jpg", emoji: "👥" },
