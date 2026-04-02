@@ -78,6 +78,7 @@ We analyze the effects of EZH2-mediated H3K27me3 changes on hepatic lipid accumu
 // ── 갤러리 데이터 ─────────────────────────────────────────
 // photo 경로와 date(표시될 연도/날짜)만 입력하면 됩니다
 const GALLERY = [
+  { date: "2026 Spring", photo: "images/gallery_img/gallery_2026.jpg", emoji: "🌸" },
   { date: "2025", photo: "images/gallery_img/gallery_2025.jpg", emoji: "👥" },
   { date: "2024", photo: "images/gallery_img/gallery_2024.jpg", emoji: "👥" },
   { date: "2023", photo: "images/gallery_img/gallery_2023.jpg", emoji: "👥" },
