@@ -7,7 +7,7 @@
 const PROFESSOR = {
   name:  "김미랑 (Mirang Kim), Ph.D.",
   title: "Principal Researcher · Aging Convergence Research Center, KRIBB\nProfessor · Department of Functional Genomics, UST",
-  photo: "images/people_img/professor.png",
+  photo: "images/people_img/professor.jpg",
   bio: `Dr. Mirang Kim is an investigator specializing in the intersection of genomics and epigenomics. Her research is dedicated to decoding how epigenetic modifications—with a primary emphasis on DNA methylation—govern cellular memory, disease pathogenesis, and the biological process of aging.
 
 Her work has provided critical insights into the molecular drivers of complex diseases, including oncology (gastric and lung cancers), metabolic health (MASLD and MASH), and aging (epigenome editing technology aimed at modulating and reversing aging-related cellular decline).
@@ -78,12 +78,12 @@ EZH2 매개 H3K27me3 변화가 간 세포의 지방 축적 및 염증 반응에 
 // ── 갤러리 데이터 ─────────────────────────────────────────
 // photo 경로와 date(표시될 연도/날짜)만 입력하면 됩니다
 const GALLERY = [
-  { date: "2025", photo: "images/gallery_img/gallery_2025.png", emoji: "👥" },
-  { date: "2024", photo: "images/gallery_img/gallery_2024.png", emoji: "👥" },
-  { date: "2023", photo: "images/gallery_img/gallery_2023.png", emoji: "👥" },
-  { date: "2022", photo: "images/gallery_img/gallery_2022.png", emoji: "👥" },
-  { date: "2021", photo: "images/gallery_img/gallery_2021.png", emoji: "👥" },
-  { date: "2020", photo: "images/gallery_img/gallery_2020.png", emoji: "👥" },
+  { date: "2025", photo: "images/gallery_img/gallery_2025.jpg", emoji: "👥" },
+  { date: "2024", photo: "images/gallery_img/gallery_2024.jpg", emoji: "👥" },
+  { date: "2023", photo: "images/gallery_img/gallery_2023.jpg", emoji: "👥" },
+  { date: "2022", photo: "images/gallery_img/gallery_2022.jpg", emoji: "👥" },
+  { date: "2021", photo: "images/gallery_img/gallery_2021.jpg", emoji: "👥" },
+  { date: "2020", photo: "images/gallery_img/gallery_2020.jpg", emoji: "👥" },
   // 사진 추가 시: { date: "2024. 06", photo: "images/gallery_img/파일명.png", emoji: "📸" },
 ];
 
