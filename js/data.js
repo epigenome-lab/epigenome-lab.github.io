@@ -49,29 +49,29 @@ const PROJECTS = [
     title: "Development of Innovative Treatment Technology for MASLD",
     tag:   "Metabolic Disease · Epigenomics",
     image: "images/research_img/research1.png",
-    desc:  `대사이상지방간질환(MASLD) 빅데이터를 활용한 혁신치료기술 개발 연구입니다.
-MASLD의 분자적 기전을 후성유전체 수준에서 규명하고, DNA 메틸화 패턴 분석을 통해 질환의 바이오마커 및 치료 표적을 발굴합니다.
-다기관 임상 데이터와 다중오믹스 분석을 결합하여 정밀 의료 기반의 새로운 치료 전략을 제시합니다.`,
+    desc:  `This project focuses on developing innovative treatment technologies for Metabolic dysfunction-Associated Steatotic Liver Disease (MASLD) using big data.
+We aim to elucidate the molecular mechanisms of MASLD at the epigenomic level, and discover disease biomarkers and therapeutic targets through DNA methylation pattern analysis.
+By integrating multi-center clinical data with multi-omics analyses, we propose novel therapeutic strategies based on precision medicine.`,
     tags:  ["MASLD", "DNA Methylation", "Multi-omics", "Biomarker"],
-    period: "진행 중",
+    period: "Ongoing",
   },
   {
     title: "SMARTor: Next-Generation Epigenome Editing Technology",
     tag:   "Epigenome Editing · Technology Development",
     image: "images/research_img/research2.png",
-    desc:  `초소형 고효율 차세대 후성유전체 편집 SMARTor(Specific Modulation and Activation of Regulatory Targets via optimized reprogramming) 기술 개발 연구입니다.
-기존 CRISPR 기반 편집 도구의 한계를 극복하는 소형화·고특이성 후성유전체 편집 플랫폼을 개발하여, 노화 및 질환 관련 후성유전체 변화를 정밀하게 조절합니다.`,
+    desc:  `This project focuses on developing SMARTor (Specific Modulation and Activation of Regulatory Targets via optimized reprogramming), a next-generation miniaturized, high-efficiency epigenome editing technology.
+We are developing a compact, highly specific epigenome editing platform that overcomes the limitations of conventional CRISPR-based tools, enabling precise modulation of aging- and disease-associated epigenomic changes.`,
     tags:  ["Epigenome Editing", "SMARTor", "CRISPR", "Aging"],
-    period: "진행 중",
+    period: "Ongoing",
   },
   {
     title: "MASH Pathogenesis via EZH2 Activation & Epigenetic Reprogramming",
     tag:   "Liver Disease · Molecular Biology",
     image: "images/research_img/research3.png",
-    desc:  `히스톤 메틸화효소 EZH2 활성화와 후성유전학적 리프로그래밍에 의한 MASH(대사이상지방간염) 발병 기전 규명 연구입니다.
-EZH2 매개 H3K27me3 변화가 간 세포의 지방 축적 및 염증 반응에 미치는 영향을 분석하고, 이를 표적으로 하는 치료 전략을 탐색합니다.`,
+    desc:  `This project investigates the pathogenesis of MASH (Metabolic dysfunction-Associated Steatohepatitis) via EZH2 activation and epigenetic reprogramming.
+We analyze the effects of EZH2-mediated H3K27me3 changes on hepatic lipid accumulation and inflammatory responses, and explore therapeutic strategies targeting these mechanisms.`,
     tags:  ["MASH", "EZH2", "H3K27me3", "Epigenetic Reprogramming"],
-    period: "진행 중",
+    period: "Ongoing",
   },
 ];
 
