@@ -357,7 +357,7 @@ nav {
 /* ====== PROFESSOR CARD ====== */
 .professor-card {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 4rem; align-items: start;
   margin-bottom: 5rem;
   padding-bottom: 5rem;
@@ -646,8 +646,8 @@ footer {
     gap: 2rem;
   }
   .professor-photo-wrap { position: static; }
-  .professor-photo { max-width: 240px; width: 100%; height: auto; }
-  .professor-photo-placeholder { max-width: 240px; }
+  .professor-photo { max-width: 320px; width: 100%; height: auto; }
+  .professor-photo-placeholder { max-width: 320px; }
   .project-card, .project-card:nth-child(even) {
     grid-template-columns: 1fr; direction: ltr;
   }
